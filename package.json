@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "react-build": "rm -rf polar-web && git clone https://github.com/polar-write/polar-web.git && cd polar-web && yarn && yarn build && cd ..",
+    "react-build-update": "cd polar-web && git pull && yarn && yarn build && cd ..",
     "build": "yarn react-build && yarn dist:mac && yarn dist:win",
+    "build-update": "yarn react-build-update && yarn dist:mac && yarn dist:win",
     "dist:mac": "electron-builder --mac",
     "dist:win": "electron-builder --win --x64 --ia32",
     "prebuild": "rm -rf ./polar-web/build && rm -rf ./dist",

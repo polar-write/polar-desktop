@@ -20,13 +20,10 @@ function createWindow() {
     titleBarStyle: 'hiddenInset',
     webPreferences: {
       webSecurity: false,
-      nativeWindowOpen: true,
-      nodeIntegration: true,
-      enableRemoteModule: true,
     },
   });
 
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.loadURL(LOAD_URL);
 
